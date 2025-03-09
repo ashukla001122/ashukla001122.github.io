@@ -6,35 +6,69 @@
     <title>ThoughtControl App</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 20%;
-        }
-        button {
-            background-color: #007bff;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
             color: white;
-            padding: 10px 20px;
-            font-size: 18px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
             border: none;
+            border-radius: 30px;
             cursor: pointer;
-            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+            animation: pulse 1.5s infinite alternate;
         }
-        button:hover {
-            background-color: #0056b3;
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
     </style>
 </head>
 <body>
 
     <h1>Welcome to ThoughtControl</h1>
-    <p>Click the button below to access the app.</p>
-    <button onclick="goToApp()">Go to ThoughtControl App</button>
-
-    <script>
-        function goToApp() {
-            window.location.href = "https://bd55e486-ba3b-47e7-94eb-f0218390d398-00-1zgfph96rbn2x.spock.repl.co";
-        }
-    </script>
+    <p>Experience the future of mind-controlled interfaces.</p>
+    <a href="https://bd55e486-ba3b-47e7-94eb-f0218390d398-00-1zgfph96rbn2x.spock.repl.co" class="btn">Launch ThoughtControl</a>
 
 </body>
 </html>
